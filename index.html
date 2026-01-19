@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitnFlex Dining Menu</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
+.header{background:linear-gradient(135deg,#83FF4E,#0B6623);color:#fff;text-align:center;padding:22px;font-size:26px;font-weight:bold}
+.tagline{text-align:center;font-size:14px;color:#555;padding:8px 18px 16px}
+.container{max-width:1400px;margin:auto;padding:16px}
+
+/* FORCE SIDE BY SIDE */
+.menu-grid{
+    display:grid;
+    grid-template-columns:50% 50%;
+    gap:20px;
+}
+@media(max-width:700px){
+    .menu-grid{grid-template-columns:1fr;}
+}
+
+.section{background:#fff;border-radius:18px;padding:16px;box-shadow:0 4px 14px rgba(0,0,0,0.08)}
+.section-title{color:#0B6623;font-size:22px;margin-bottom:14px;border-left:6px solid #83FF4E;padding-left:10px}
+.category{margin-top:18px}
+.category h3{color:#0B6623;margin-bottom:10px}
+.card{background:#f9f9f9;border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.combo-card{background:linear-gradient(135deg,#ecffec,#f6fff6);border:1px dashed #83FF4E}
+.item-name{font-weight:bold;font-size:15.5px}
+.item-desc{font-size:13.5px;color:#555;margin:4px 0}
+.price{font-weight:bold;color:#0B6623;margin-top:4px}
+.footer{text-align:center;font-size:13px;padding:20px 14px;color:#666}
+</style>
+</head>
+<body>
+<div class="header">🍽️ FitnFlex Dining Menu</div>
+<div class="tagline">Clean • Protein-Packed • Wholesome Dining</div>
+<div class="container">
+<div class="menu-grid">
+<div class="section"><div class="section-title">🥗 Ala-carte Menu</div><div class="category"><h3>Starters & Bites</h3>
+        <div class="card">
+            <div class="item-name">Golden Sourdough Omelette Bliss</div>
+            <div class="item-desc">Fluffy, herb‑kissed omelette on crisp sourdough — breakfast joy in every bite.</div>
+            <div class="price">₹149</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Masala Sourdough Spice Omelette</div>
+            <div class="item-desc">Bold Indian spices and onions wrapped in golden omelette atop sourdough toast.</div>
+            <div class="price">₹159</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Sunny Sourdough Eggs Classic</div>
+            <div class="item-desc">Perfect sunny‑side eggs on lightly toasted sourdough — simple, clean, delicious.</div>
+            <div class="price">₹149</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Garden Sourdough Veg Delight</div>
+            <div class="item-desc">Chargrilled veggies layered in zesty sauces on toasted sourdough — wholesome crunch.</div>
+            <div class="price">₹180</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Grilled Chicken Sourdough Club Supreme</div>
+            <div class="item-desc">Juicy grilled chicken, cheese & greens stacked between toasted sourdough slices.</div>
+            <div class="price">₹231</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Herb‑Kissed Sourdough Garlic Toast</div>
+            <div class="item-desc">Crispy sourdough bathed in aromatic garlic butter — simple indulgence.</div>
+            <div class="price">₹137</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Cheesy Sourdough Overload Toast</div>
+            <div class="item-desc">Golden sourdough smothered with melty cheese for ultimate cheesy love.</div>
+            <div class="price">₹177</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Chili Blast Sourdough Toast</div>
+            <div class="item-desc">Spicy chili and gooey cheese layered on toasted sourdough — bold & addictive.</div>
+            <div class="price">₹162</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Smoky BBQ Chicken Wings</div>
+            <div class="item-desc">Tender chicken wings glazed with smoky BBQ goodness — finger‑licking delight.</div>
+            <div class="price">₹251</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Cilantro Pesto Chicken Bites</div>
+            <div class="item-desc">Juicy chicken tossed in basil‑cilantro pesto and fresh herbs.</div>
+            <div class="price">₹246</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Paneer & Mushroom Kashthoni Sizzler</div>
+            <div class="item-desc">Grilled paneer and mushrooms with vibrant spices — veg perfection.</div>
+            <div class="price">₹230</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Fiery Thecha Paneer Bites</div>
+            <div class="item-desc">Bold Thecha‑marinated paneer chunks with explosive flavor.</div>
+            <div class="price">₹219</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Spicy Cottage Cheese Wrap</div>
+            <div class="item-desc">Soft wrap with fiery cottage cheese, fresh greens & zesty sauces.</div>
+            <div class="price">₹231</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Fiery Chicken Sourdough Wrap</div>
+            <div class="item-desc">Spicy grilled chicken patty, fresh veggies & sauces in a sourdough wrap.</div>
+            <div class="price">₹246</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Double Egg Sourdough Wrap Delight</div>
+            <div class="item-desc">Two seasoned eggs with fresh veggies wrapped in our soft sourdough wrap.</div>
+            <div class="price">₹209</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Chicken Mozzarella Mini Sourdough Pizza</div>
+            <div class="item-desc">Mini sourdough base topped with tender chicken, mozzarella & fresh veg.</div>
+            <div class="price">₹251</div>
+        </div>
+        </div><div class="category"><h3>Drinks & Refreshers</h3>
+        <div class="card">
+            <div class="item-name">Peanut Butter Chill Smoothie</div>
+            <div class="item-desc">Creamy peanut butter blended with ice‑cream — cool & indulgent.</div>
+            <div class="price">₹221</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Summer Watermelon Refresher</div>
+            <div class="item-desc">Crisp watermelon juice — pure hydration & sunshine.</div>
+            <div class="price">₹137</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Muskmelon Lime Zest Splash</div>
+            <div class="item-desc">Sweet musk‑melon meets zesty lime juice — refreshment redefined.</div>
+            <div class="price">₹143</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Pineapple Mint Zest Punch</div>
+            <div class="item-desc">Tropical pineapple with mint kick — vibrant refreshment.</div>
+            <div class="price">₹152</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Honey Fruit Fiesta Bowl</div>
+            <div class="item-desc">Seasonal fruits crowned with golden honey — healthy sweet treat.</div>
+            <div class="price">₹177</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Classic Lemonade Burst</div>
+            <div class="item-desc">Freshly squeezed lemon refreshes with every sip.</div>
+            <div class="price">₹129</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Zesty Fizzy Lemon Soda</div>
+            <div class="item-desc">Lemon soda with bubbles of cool citrus delight.</div>
+            <div class="price">₹123</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Mint Lemon Cooler</div>
+            <div class="item-desc">Minty, lemony fizz — the perfect chill.</div>
+            <div class="price">₹129</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Kokum Mint Reviver</div>
+            <div class="item-desc">Tangy kokum with mint — bold and revitalizing.</div>
+            <div class="price">₹137</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Rich Creamy Chocolate Shake</div>
+            <div class="item-desc">Classic chocolate shake with velvety smooth finish.</div>
+            <div class="price">₹177</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Strawberry Dream Shake</div>
+            <div class="item-desc">Juicy strawberries blended into creamy delight.</div>
+            <div class="price">₹187</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Vanilla Cloud Shake</div>
+            <div class="item-desc">Silky vanilla dream in every sip.</div>
+            <div class="price">₹177</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Iced Cold Coffee Splash</div>
+            <div class="item-desc">Chilled coffee with milk and ice for your caffeine kick.</div>
+            <div class="price">₹162</div>
+        </div>
+        </div><div class="category"><h3>Desserts</h3>
+        <div class="card">
+            <div class="item-name">Brownie À La Mode Magic</div>
+            <div class="item-desc">Warm fudge brownie served with velvety ice‑cream scoop.</div>
+            <div class="price">₹180</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Banana Walnut Bliss Slice</div>
+            <div class="item-desc">Moist banana walnut cake bursting with flavor.</div>
+            <div class="price">₹187</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Protein Power Ladoo Bites</div>
+            <div class="item-desc">Healthy protein‑rich ladoo — guilt‑free energy.</div>
+            <div class="price">₹152</div>
+        </div>
+        </div><div class="category"><h3>Main Course Favorites</h3>
+        <div class="card">
+            <div class="item-name">Creamy Veg Alfredo Penne</div>
+            <div class="item-desc">Penne in rich creamy alfredo with fresh veggies.</div>
+            <div class="price">₹219</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Grilled Chicken Alfredo Penne</div>
+            <div class="item-desc">Creamy Alfredo penne with grilled chicken goodness.</div>
+            <div class="price">₹246</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Mini Veg & Mozzarella Sourdough Pizza</div>
+            <div class="item-desc">Veg and mozzarella savored on a soft sourdough pizza base.</div>
+            <div class="price">₹230</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Creamy Pink Sauce Penne (Veg)</div>
+            <div class="item-desc">Penne in velvety pink sauce with garden veggies.</div>
+            <div class="price">₹219</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Creamy Pink Sauce Penne (Chicken)</div>
+            <div class="item-desc">Pink sauce penne with succulent chicken.</div>
+            <div class="price">₹246</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Veg Supreme Sourdough Pizza</div>
+            <div class="item-desc">Veggies and cheese on our classic sourdough pizza crust.</div>
+            <div class="price">₹246</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">BBQ Chicken Fiesta Sourdough Pizza</div>
+            <div class="item-desc">Bold BBQ chicken on rich sourdough pizza.</div>
+            <div class="price">₹281</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Mushroom Truffle Indulgence Sourdough Pizza</div>
+            <div class="item-desc">Truffle‑kissed mushrooms on cheesy sourdough crust.</div>
+            <div class="price">₹259</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Tandoori Paneer Sourdough Pizza</div>
+            <div class="item-desc">Smoky tandoori paneer atop cheesy sourdough crust.</div>
+            <div class="price">₹251</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Grilled Chicken Power Bowl</div>
+            <div class="item-desc">Protein‑rich chicken with rice & vibrant veggies.</div>
+            <div class="price">₹266</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Paneer Power Bowl</div>
+            <div class="item-desc">Marinated paneer with quinoa & greens.</div>
+            <div class="price">₹238</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Tofu Energy Bowl</div>
+            <div class="item-desc">Grilled tofu with veggie medley & wholesome grains.</div>
+            <div class="price">₹230</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Hyrox Veg Power Meal</div>
+            <div class="item-desc">Grilled paneer & pesto veg power plate.</div>
+            <div class="price">₹281</div>
+        </div>
+        
+        <div class="card">
+            <div class="item-name">Hyrox Non‑Veg Power Meal</div>
+            <div class="item-desc">Choice of BBQ / pesto / grilled chicken for peak performance.</div>
+            <div class="price">₹294</div>
+        </div>
+        </div></div><div class="section"><div class="section-title">🍳 Combos (Ala-carte)</div><div class="category"><h3>Breakfast Combos</h3>
+        <div class="card combo-card">
+            <div class="item-name">Sourdough Morning Boost</div>
+            <div class="item-desc">1 Golden Sourdough Omelette Bliss + 1 Classic Lemonade Burst</div>
+            <div class="price">₹249 <span style='font-size:12px;color:#388e3c'>(Save ₹49)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Protein Power Breakfast</div>
+            <div class="item-desc">1 Masala Sourdough Spice Omelette + 1 Peanut Butter Chill Smoothie</div>
+            <div class="price">₹349 <span style='font-size:12px;color:#388e3c'>(Save ₹59)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Eggcellent Start</div>
+            <div class="item-desc">1 Sunny Sourdough Eggs Classic + 1 Double Egg Sourdough Wrap Delight</div>
+            <div class="price">₹369 <span style='font-size:12px;color:#388e3c'>(Save ₹49)</span></div>
+        </div>
+        </div><div class="category"><h3>🥪 Wrap & Toast Combos</h3>
+        <div class="card combo-card">
+            <div class="item-name">Veggie Delight Combo</div>
+            <div class="item-desc">1 Garden Sourdough Veg Delight + 1 Honey Fruit Fiesta Bowl</div>
+            <div class="price">₹299 <span style='font-size:12px;color:#388e3c'>(Save ₹58)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Chicken Crunch Combo</div>
+            <div class="item-desc">1 Grilled Chicken Sourdough Club Supreme + 1 Iced Cold Coffee Splash</div>
+            <div class="price">₹349 <span style='font-size:12px;color:#388e3c'>(Save ₹49)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Cheesy Toast Lovers</div>
+            <div class="item-desc">1 Cheesy Sourdough Overload Toast + 1 Mint Lemon Cooler</div>
+            <div class="price">₹279 <span style='font-size:12px;color:#388e3c'>(Save ₹75)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Spicy Wrap Mania</div>
+            <div class="item-desc">1 Fiery Chicken Sourdough Wrap + 1 Summer Watermelon Refresher</div>
+            <div class="price">₹349 <span style='font-size:12px;color:#388e3c'>(Save ₹49)</span></div>
+        </div>
+        </div><div class="category"><h3>🍕 Pizza & Pasta Combos</h3>
+        <div class="card combo-card">
+            <div class="item-name">Veggie Sourdough Fiesta</div>
+            <div class="item-desc">1 Mini Veg & Mozzarella Sourdough Pizza + 1 Muskmelon Lime Zest Splash</div>
+            <div class="price">₹349 <span style='font-size:12px;color:#388e3c'>(Save ₹61)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Chicken Alfredo Power</div>
+            <div class="item-desc">1 Grilled Chicken Alfredo Penne + 1 Classic Lemonade Burst</div>
+            <div class="price">₹399 <span style='font-size:12px;color:#388e3c'>(Save ₹93)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Sourdough Pizza Lovers</div>
+            <div class="item-desc">1 BBQ Chicken Fiesta Sourdough Pizza + 1 Rich Creamy Chocolate Shake</div>
+            <div class="price">₹429 <span style='font-size:12px;color:#388e3c'>(Save ₹109)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Paneer & Pesto Power Plate</div>
+            <div class="item-desc">1 Hyrox Veg Power Meal + 1 Honey Fruit Fiesta Bowl</div>
+            <div class="price">₹449 <span style='font-size:12px;color:#388e3c'>(Save ₹109)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Non-Veg Hyrox Combo</div>
+            <div class="item-desc">1 Hyrox Non-Veg Power Meal + 1 Peanut Butter Chill Smoothie</div>
+            <div class="price">₹499 <span style='font-size:12px;color:#388e3c'>(Save ₹91)</span></div>
+        </div>
+        </div><div class="category"><h3>🍰 Dessert Combos</h3>
+        <div class="card combo-card">
+            <div class="item-name">Sweet Indulgence</div>
+            <div class="item-desc">1 Brownie À La Mode Magic + 1 Strawberry Dream Shake</div>
+            <div class="price">₹319 <span style='font-size:12px;color:#388e3c'>(Save ₹48)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Healthy Protein Treat</div>
+            <div class="item-desc">1 Protein Power Ladoo Bites + 1 Vanilla Cloud Shake</div>
+            <div class="price">₹279 <span style='font-size:12px;color:#388e3c'>(Save ₹50)</span></div>
+        </div>
+        
+        <div class="card combo-card">
+            <div class="item-name">Banana Walnut Combo</div>
+            <div class="item-desc">1 Banana Walnut Bliss Slice + 1 Zesty Fizzy Lemon Soda</div>
+            <div class="price">₹269 <span style='font-size:12px;color:#388e3c'>(Save ₹45)</span></div>
+        </div>
+        </div>
+</div>
+</div>
+</div>
+<div class="footer">
+© <span id="year"></span> FitnFlex Cloud Kitchen<br>
+Stay Fit. Stay Fabulous 💚
+</div>
+<script>document.getElementById("year").innerText=new Date().getFullYear();</script>
+</body>
+</html>
