@@ -9,21 +9,20 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
 .header{background:linear-gradient(135deg,#83FF4E,#0B6623);color:#fff;text-align:center;padding:22px;font-size:26px;font-weight:bold}
 .tagline{text-align:center;font-size:14px;color:#555;padding:8px 18px 16px}
 .container{max-width:1400px;margin:auto;padding:16px}
-
-/* FORCE SIDE BY SIDE */
-.menu-grid{
-    display:grid;
-    grid-template-columns:50% 50%;
-    gap:20px;
-}
-@media(max-width:700px){
-    .menu-grid{grid-template-columns:1fr;}
-}
-
+.menu-grid{display:grid;grid-template-columns:50% 50%;gap:20px}
+@media(max-width:700px){.menu-grid{grid-template-columns:1fr}}
 .section{background:#fff;border-radius:18px;padding:16px;box-shadow:0 4px 14px rgba(0,0,0,0.08)}
 .section-title{color:#0B6623;font-size:22px;margin-bottom:14px;border-left:6px solid #83FF4E;padding-left:10px}
-.category{margin-top:18px}
-.category h3{color:#0B6623;margin-bottom:10px}
+
+/* Collapsible */
+.collapsible{margin-top:16px}
+.collapsible-header{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:10px;background:#f0fff0;border-radius:10px}
+.collapsible-header span{font-size:18px;font-weight:bold;color:#0B6623}
+.toggle{font-size:20px;transition:0.3s}
+.collapsible-content{display:none;margin-top:10px}
+.collapsible.active .collapsible-content{display:block}
+.collapsible.active .toggle{transform:rotate(180deg)}
+
 .card{background:#f9f9f9;border-radius:12px;padding:12px 14px;margin-bottom:10px}
 .combo-card{background:linear-gradient(135deg,#ecffec,#f6fff6);border:1px dashed #83FF4E}
 .item-name{font-weight:bold;font-size:15.5px}
@@ -37,7 +36,13 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
 <div class="tagline">Clean • Protein-Packed • Wholesome Dining</div>
 <div class="container">
 <div class="menu-grid">
-<div class="section"><div class="section-title">🥗 Ala-carte Menu</div><div class="category"><h3>Starters & Bites</h3>
+<div class="section"><div class="section-title">🥗 Ala-carte Menu</div>
+        <div class="collapsible active">
+        <div class="collapsible-header" onclick="toggle(this)">
+            <span>Starters & Bites</span><span class="toggle">⌄</span>
+        </div>
+        <div class="collapsible-content">
+        
         <div class="card">
             <div class="item-name">Golden Sourdough Omelette Bliss</div>
             <div class="item-desc">Fluffy, herb‑kissed omelette on crisp sourdough — breakfast joy in every bite.</div>
@@ -133,7 +138,13 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
             <div class="item-desc">Mini sourdough base topped with tender chicken, mozzarella & fresh veg.</div>
             <div class="price">₹251</div>
         </div>
-        </div><div class="category"><h3>Drinks & Refreshers</h3>
+        </div></div>
+        <div class="collapsible">
+        <div class="collapsible-header" onclick="toggle(this)">
+            <span>Drinks & Refreshers</span><span class="toggle">⌄</span>
+        </div>
+        <div class="collapsible-content">
+        
         <div class="card">
             <div class="item-name">Peanut Butter Chill Smoothie</div>
             <div class="item-desc">Creamy peanut butter blended with ice‑cream — cool & indulgent.</div>
@@ -211,7 +222,13 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
             <div class="item-desc">Chilled coffee with milk and ice for your caffeine kick.</div>
             <div class="price">₹162</div>
         </div>
-        </div><div class="category"><h3>Desserts</h3>
+        </div></div>
+        <div class="collapsible">
+        <div class="collapsible-header" onclick="toggle(this)">
+            <span>Desserts</span><span class="toggle">⌄</span>
+        </div>
+        <div class="collapsible-content">
+        
         <div class="card">
             <div class="item-name">Brownie À La Mode Magic</div>
             <div class="item-desc">Warm fudge brownie served with velvety ice‑cream scoop.</div>
@@ -229,7 +246,13 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
             <div class="item-desc">Healthy protein‑rich ladoo — guilt‑free energy.</div>
             <div class="price">₹152</div>
         </div>
-        </div><div class="category"><h3>Main Course Favorites</h3>
+        </div></div>
+        <div class="collapsible">
+        <div class="collapsible-header" onclick="toggle(this)">
+            <span>Main Course Favorites</span><span class="toggle">⌄</span>
+        </div>
+        <div class="collapsible-content">
+        
         <div class="card">
             <div class="item-name">Creamy Veg Alfredo Penne</div>
             <div class="item-desc">Penne in rich creamy alfredo with fresh veggies.</div>
@@ -313,7 +336,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
             <div class="item-desc">Choice of BBQ / pesto / grilled chicken for peak performance.</div>
             <div class="price">₹294</div>
         </div>
-        </div></div><div class="section"><div class="section-title">🍳 Combos (Ala-carte)</div><div class="category"><h3>Breakfast Combos</h3>
+        </div></div></div><div class="section"><div class="section-title">🍳 Combos (Ala-carte)</div><div style="margin-top:18px"><h3 style="color:#0B6623">Breakfast Combos</h3>
         <div class="card combo-card">
             <div class="item-name">Sourdough Morning Boost</div>
             <div class="item-desc">1 Golden Sourdough Omelette Bliss + 1 Classic Lemonade Burst</div>
@@ -331,7 +354,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
             <div class="item-desc">1 Sunny Sourdough Eggs Classic + 1 Double Egg Sourdough Wrap Delight</div>
             <div class="price">₹369 <span style='font-size:12px;color:#388e3c'>(Save ₹49)</span></div>
         </div>
-        </div><div class="category"><h3>🥪 Wrap & Toast Combos</h3>
+        </div><div style="margin-top:18px"><h3 style="color:#0B6623">🥪 Wrap & Toast Combos</h3>
         <div class="card combo-card">
             <div class="item-name">Veggie Delight Combo</div>
             <div class="item-desc">1 Garden Sourdough Veg Delight + 1 Honey Fruit Fiesta Bowl</div>
@@ -355,7 +378,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
             <div class="item-desc">1 Fiery Chicken Sourdough Wrap + 1 Summer Watermelon Refresher</div>
             <div class="price">₹349 <span style='font-size:12px;color:#388e3c'>(Save ₹49)</span></div>
         </div>
-        </div><div class="category"><h3>🍕 Pizza & Pasta Combos</h3>
+        </div><div style="margin-top:18px"><h3 style="color:#0B6623">🍕 Pizza & Pasta Combos</h3>
         <div class="card combo-card">
             <div class="item-name">Veggie Sourdough Fiesta</div>
             <div class="item-desc">1 Mini Veg & Mozzarella Sourdough Pizza + 1 Muskmelon Lime Zest Splash</div>
@@ -385,7 +408,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
             <div class="item-desc">1 Hyrox Non-Veg Power Meal + 1 Peanut Butter Chill Smoothie</div>
             <div class="price">₹499 <span style='font-size:12px;color:#388e3c'>(Save ₹91)</span></div>
         </div>
-        </div><div class="category"><h3>🍰 Dessert Combos</h3>
+        </div><div style="margin-top:18px"><h3 style="color:#0B6623">🍰 Dessert Combos</h3>
         <div class="card combo-card">
             <div class="item-name">Sweet Indulgence</div>
             <div class="item-desc">1 Brownie À La Mode Magic + 1 Strawberry Dream Shake</div>
@@ -409,8 +432,11 @@ body{margin:0;font-family:Arial,sans-serif;background:#f4f6f4;color:#222}
 </div>
 <div class="footer">
 © <span id="year"></span> FitnFlex Cloud Kitchen<br>
-Stay Fit. Stay Fabulous 💚
+Developed by <strong>TwoFitNomads</strong>
 </div>
-<script>document.getElementById("year").innerText=new Date().getFullYear();</script>
+<script>
+document.getElementById("year").innerText=new Date().getFullYear();
+function toggle(el){el.parentElement.classList.toggle("active");}
+</script>
 </body>
 </html>
